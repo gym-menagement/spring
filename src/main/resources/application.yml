@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    username: gym
+    url: jdbc:mariadb://141.164.56.77:3306/gym
+    driverClassName: org.mariadb.jdbc.Driver
+    password: gymdb
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    groups-order: DESC
+    tags-sorter: alpha
+    operations-sorter: alpha
+    disable-swagger-default-url: true
+    display-request-duration: true
+  api-docs:
+    path: /api-docs
+    enabled: true
+  show-actuator: true
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  paths-to-match:
+    - /api/**
